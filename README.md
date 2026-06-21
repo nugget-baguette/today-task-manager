@@ -1,53 +1,67 @@
-# Daily Task Manager
+Daily Task Manager
 
-Daily Task Manager is a simple and modern desktop application designed for visual and intuitive management of your daily schedule. Built using Python and CustomTkinter.
+Daily Task Manager is a simple, modern, and keyboard-centric desktop application designed for intuitive daily schedule management. Built with Python and CustomTkinter.
 
-## Features
+🚀 Key Features
 
-* **Daily File Management**: Automatically creates and loads a dedicated task file (`YYYY-MM-DD.json`) based on the current date upon startup.
+Keyboard-Driven Workflow: Experience seamless task management without your hands ever leaving the keyboard. Navigate, create, resize, and move tasks instantly using simple keystrokes.
 
-* **Intuitive Controls**: Click the timeline to add tasks. Drag and drop (or use keyboard controls) to move or resize tasks.
+Daily "Tear-off Calendar" System: Automatically creates and loads a dedicated JSON file for the current day (YYYY-MM-DD.json). Start fresh every morning while keeping a pristine record of your past days.
 
-* **Progress Indicator**: The progress bar on the timeline automatically updates according to the current time.
+Real-time Progress Tracker: A visual progress bar on the timeline updates dynamically alongside the current time.
 
-* **Modern UI**: Features a sleek, rounded-design interface.
+Modern & Sleek UI: A highly polished, distraction-free interface featuring rounded corners and adaptive layouts.
 
-## How to Use
+⌨️ How to Use (Keyboard Shortcuts)
 
-1. **Add Tasks**: Click an empty slot on the timeline, type the task name, and press `Enter`.
+This app is built for speed. Here is how you can manage your entire day using just your keyboard:
 
-2. **Toggle Completion**: Press `Right Click` or `Ctrl+Enter` (`Command+Enter`) on the task entry field to toggle the completion status.
+Navigate: Use ↑ / ↓ keys to move the cursor smoothly across the timeline.
 
-3. **Task Details**: `Double-click` or press `Ctrl+d` (`Command+d`, `d` is short for **description**) to open a detail window where you can save notes or detailed descriptions. The data is saved as `json` file at
+Add a Task: Type your task name in an empty time slot and hit Enter. The task will be created and instantly "grabbed".
 
-4. **Move/Resize Tasks**:
+Select/Grab a Task: Press Enter on an existing task. The border will highlight (yellow), indicating it's ready to be modified.
 
-   * `Shift + Up/Down Arrow`: Adjust the length of the task (resize).
+Move a Task: While grabbed, use ↑ / ↓ to move the task up or down the timeline.
 
-   * `Up/Down Arrow`: Move the selection cursor to navigate tasks.
+Resize (Change Duration): While grabbed, use Shift + ↑ / Shift + ↓ to extend or shrink the task's time block.
 
-## Requirements
+Toggle Completion: Press Ctrl + Enter (or Command + Enter on Mac) to cross out a task and mark it as done.
 
-* Python 3.x
+Add Details/Notes: Press Ctrl + D (or Command + D on Mac) to pop open a detailed description window for memos and links.
 
-* Required libraries: `customtkinter`
+Release/Deselect: Press Esc (or Enter again) to drop the task and return to navigation mode.
 
-## Installation and Running
+⚠️ Troubleshooting (Important!)
 
-1. Clone or download the repository.
+Keyboard shortcuts not working or acting weird?
+Please check if your NumLock key is ON.
+Due to how the underlying GUI library (Tkinter) handles keystrokes, having NumLock turned ON can interfere with the Enter and Arrow keys, making the app think a modifier key is constantly pressed. If you experience unexpected behavior (e.g., tasks completing randomly instead of being selected), turn off NumLock.
 
-2. Install dependencies using `uv`:
+💻 Requirements
 
-   ```
-   uv add customtkinter
-   ```
+uv (An extremely fast Python package and project manager)
 
-3. Run the application:
+Required library: customtkinter
 
-   ```
-   python main.py
-   ```
+🛠️ Installation & Quick Start
 
-## License
+Clone or download this repository.
+
+Add the dependency using uv:
+
+uv add customtkinter
+
+
+Run the application:
+
+uv run main.py
+
+
+Pro Tip: Silent Launch (Windows)
+
+We recommend using a .vbs script to launch the app entirely in the background without the black command-prompt window. You can create a start_app.vbs file for a seamless, native-app-like experience.
+
+📄 License
 
 MIT License

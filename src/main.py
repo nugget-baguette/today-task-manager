@@ -55,8 +55,8 @@ class DailyTaskApp(ctk.CTk):
         filename = f"{self.current_date.strftime('%Y-%m-%d')}.json"
         self.save_file = get_base_path() / filename
 
-        self.start_hour = 8
-        self.end_hour = 18 
+        self.start_hour = 6
+        self.end_hour = 22 
         self.slots_per_hour = 6 
         
         self.total_hours = self.end_hour - self.start_hour + 1
